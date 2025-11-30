@@ -34,10 +34,6 @@ spec:
 
       volumes:
       - name: vprodb
-        # nfs:
-        #   server: 172.16.16.103 # ip to our nfs server
-        #   path: /mnt/nfs_share # the exported directory
-      volumes:
-      - name: vprodb
-        persistentVolumeClaim:
-          claimName: vprodb-pvc
+        nfs:
+          server: 172.16.16.103 # IP to our NFS server
+          path: /mnt/nfs_share # The exported directory
